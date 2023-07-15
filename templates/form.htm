@@ -1,0 +1,31 @@
+{% if note %}
+<h3>{{note}}</h3>
+{% endif %}
+
+<div id="down">
+	<h4> Please enter your specifications to calculate </h4>
+	<form id="requirements" method="post" action="/calculate">
+		<label for="s">Choose a scalable service:</p>
+		<select name="s">
+			<option value="ec2">Elastic Compute Cloud (EC2)</option>
+			<option value="lambda">Lambda</option>
+		</select>
+		<br><br>
+		<p>Number of resources: <input type="number" name="r" placeholder="Please specify a number" /></p>
+		<br><br>
+		<p>Length of price history: <input type="number" name="h" placeholder="Please specify a number" /></p>
+		<br><br>
+		<p>Number of 'shots' <input type="number" name="d" placeholder="Please specify a number" /></p>
+		<br><br>
+		<p>Number of of days after which to check profit/loss: <input type="number" name="p" placeholder="When do you want to check profit/loss?" /></p>
+		<br><br>
+		<label for="buy">Buy</label>
+		<input type="radio" id="buy" name="t" value="buy" checked/>
+		<label for="sell">Sell</label>
+		<input type="radio" id="sell" name="t" value="sell" />
+		<br><br>
+		
+		<input type="submit" name="calc" value="Calculate" />
+	</form>
+	</div>	
+</div>

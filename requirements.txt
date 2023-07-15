@@ -1,0 +1,11 @@
+boto3==1.10.50
+Flask==1.1.1
+Flask-GoogleCharts==0.1.0
+future==0.18.2
+gunicorn==20.0.4
+Jinja2==3.0.3
+numpy==1.24.2
+pandas==1.5.3
+pandas-datareader==0.10.0
+Werkzeug==2.0.3
+yfinance==0.2.12

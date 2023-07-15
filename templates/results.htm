@@ -1,0 +1,82 @@
+{% extends "_base.htm" %}
+
+{% block title %}
+	Results - COMM034 Coursework - vn00197
+{% endblock %}
+
+{% block pageblock %}
+<h3>Here are your results!</h3>
+<br><br><br>
+
+<div id="down">
+	<table>
+		<p>Audit</p>
+		<tr>
+			<th>Service</th>
+			<td>{{s}}</td>
+		</tr>
+		<tr>
+			<th>Number of Resources</th>
+			<td>{{r}}</td>
+		</tr>
+		<tr>
+			<th>Minimum Price History</th>
+			<td>{{h}}</td>
+		</tr>
+		<tr>
+			<th>Data points (Shots)</th>
+			<td>{{d}}</td>
+		</tr>
+		<tr>
+			<th>Buy/Sell</th>
+			<td>{{t}}</td>
+		</tr>
+		<tr>
+			<th>No. of days to check profit/loss</th>
+			<td>{{p}}</td>
+		</tr>
+		<tr>
+			<th>Average 95% value</th>
+			<td>{{avg95}}</td>
+		</tr>
+		<tr>
+			<th>Average 99% value</th>
+			<td>{{avg99}}</td>
+		</tr>
+		<tr>
+			<th>Time taken</th>
+			<td>{{time}}</td>
+		</tr>
+		<tr>
+			<th>Cost incurred</th>
+			<td>{{cost}}</td>
+		</tr>
+	</table>
+
+	<img src="{{chart}}" alt="Chart: Check Connection and try again"/>
+	
+	{% if note %}
+	<h3>
+	<table>
+		<tr>
+			<th>Date</th>
+			<th>95% Risk Values</th>
+			<th>99% Risk Values</th>
+			<th>Profit/Loss per stock</th>
+		</tr>
+		{% for val in note %}
+		<tr>
+			<td>{{val.0}}</td>
+			<td>{{val.1}}</td>
+			<td>{{val.2}}</td>
+			<td>{{val.3}}</td>
+		</tr>
+		{% endfor %}
+	</table>	
+	</h3>
+	{% endif %}
+	
+	
+	
+</div>
+{% endblock %}	

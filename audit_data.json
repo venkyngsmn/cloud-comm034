@@ -1,0 +1,13 @@
+{
+  "s": ["Service Type"],
+  "r": ["Number of Resources"],
+  "h": ["History"],
+  "d": ["Data points(shots)"],
+  "t": ["Buy/Sell"],
+  "p": ["Number of days"],
+  "avg95": ["Average 95% risk"],
+  "avg99": ["Average 99% risk"],
+  "cost": ["Total Cost"],
+  "time": ["Time taken"],
+  "profit": ["Total Profit/Loss"]
+}

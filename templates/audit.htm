@@ -1,0 +1,49 @@
+{% extends "_base.htm" %}
+
+{% block title %}
+	Audit - COMM034 Coursework - vn00197
+{% endblock %}
+
+{% block pageblock %}
+<div id = "up">
+	<h3><a href="index.htm">Main page</a></h3>	
+	<h3><a href="javascript:history.back()">Go back</a></h3>
+	<h1> Here is your history!</h1>
+</div>
+
+<div id="down">
+	<table>
+		<thead>
+			<tr>
+				<th>Service</th>
+				<th>Number of Resources</th>
+				<th>Price History</th>
+				<th>Data Points (Shots)</th>
+				<th>Buy/Sell</th>
+				<th>Number of days</th>
+				<th>Average 95% value</th>
+				<th>Average 99% value</th>
+				<th>Cost incurred</th>
+				<th>Time taken (seconds)</th>
+			</tr>
+		</thead>
+		<tbody>
+		{% for vals in note %}
+			<tr>
+				<td>{{ vals.0 }}</td>
+				<td>{{ vals.1 }}</td>
+				<td>{{ vals.2 }}</td>
+				<td>{{ vals.3 }}</td>
+				<td>{{ vals.4 }}</td>
+				<td>{{ vals.5 }}</td>
+				<td>{{ vals.6 }}</td>
+				<td>{{ vals.7 }}</td>
+				<td>{{ vals.8 }}</td>
+				<td>{{ vals.9 }}</td>
+			</tr>
+		{% endfor %}
+		</tbody>
+	</table>
+</div>
+
+{% endblock %}
