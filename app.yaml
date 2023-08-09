@@ -1,2 +1,3 @@
 runtime: python37
-entrypoint: gunicorn -b :$PORT index:app --timeout=600
+entrypoint: gunicorn -b :$PORT index:app -t 300
+

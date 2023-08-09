@@ -1,24 +1,25 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html>
 
 <head>
-<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
-<link href="/static/def.css" rel="stylesheet" type="text/css" />
-<title>
-	{% block title %} replace title {% endblock %}
-</title>
+    <meta charset="utf-8">
+    <link href="/static/def.css" rel="stylesheet" type="text/css">
+    <title>{% block title %}replace title{% endblock %}</title>
 </head>
 
 <body>
-	<h3><a href="{{ url_for('auditHandler') }}">Audit page</a>&nbsp;&nbsp;<a href="javascript:history.back()">Go back</a>&nbsp;&nbsp;<a href="index.htm">Go Home</a></h3>
-	<div id="page">
-		{% block pageblock %}
-			replace page
-		{% endblock %}
-	</div>
-	
-	<div id="footer">
-		<p>COMM034 Coursework - Venkatesh Nagasubramanian - <a href="mailto:vn00197@surrey.ac.uk">vn00197@surrey.ac.uk</a></p>
-	</div>
+    <div class="container">
+        <h3><a href="{{ url_for('auditHandler') }}">Audit page</a>&nbsp;&nbsp;<a href="javascript:history.back()">Go back</a>&nbsp;&nbsp;<a href="index.htm">Go Home</a>&nbsp;&nbsp;<a href="{{ url_for('terminateHandler') }}">Terminate all instances</a></h3>
+        <div class="content">
+            {% block pageblock %}
+            replace page
+            {% endblock %}
+        </div>
+        <div id="footer">
+            <p>COMM034 Coursework - Venkatesh Nagasubramanian - <a href="mailto:vn00197@surrey.ac.uk">vn00197@surrey.ac.uk</a></p>
+        </div>
+    </div>
 </body>
+
 </html>
+

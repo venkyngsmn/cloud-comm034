@@ -5,12 +5,28 @@
 {% endblock %}
 
 {% block pageblock %}
-
+	{% if note %}
+		<h3 style="color:red">{{ note }}</h3>
+	{% endif %}
 	<div id = "up">
 		<h1> Hi! welcome to the coursework of COMM034 - Cloud Computing module <br>
 		Please enter the values to analyse the stock data of BP.L</h1>
 	</div>
-{% include 'form.htm' %}
+	<div id="down">
+	    <h4>Please enter your specifications to calculate</h4>
+	    <form id="init" method="post" action="/calculate">
+		<label for="s">Choose a scalable service:</label>
+		<select name="s">
+		    <option value="ec2">Elastic Compute Cloud (EC2)</option>
+		    <option value="lambda">Lambda</option>
+		</select>
+		<br><br>
+		<p>Number of resources: <input type="number" name="r" placeholder="Please specify a number" required/></p>
+		<br><br>
+		
+		<input type="submit" name="init" class="butt" value="Initialise" />&nbsp;<input type="reset" name="reset" class="butt" value="Reset" />
+	    </form>
+	</div>
 
 {% endblock %}
 		

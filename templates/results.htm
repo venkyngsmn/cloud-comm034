@@ -5,12 +5,12 @@
 {% endblock %}
 
 {% block pageblock %}
-<h3>Here are your results!</h3>
+<h1>Here are your results!</h1>
 <br><br><br>
 
-<div id="down">
+<div id="down" style="text-align: center">
 	<table>
-		<p>Audit</p>
+		<h2>Audit</h2>
 		<tr>
 			<th>Service</th>
 			<td>{{s}}</td>
@@ -51,9 +51,12 @@
 			<th>Cost incurred</th>
 			<td>{{cost}}</td>
 		</tr>
+		<tr>
+			<th>Net Profit/Loss</th>
+			<td>{{profit}}</td>
+		</tr>
 	</table>
-
-	<img src="{{chart}}" alt="Chart: Check Connection and try again"/>
+	<img src="{{chart}}" alt="Chart: Check Connection and try again" style="margin-left: auto; margin-right: auto"/>
 	
 	{% if note %}
 	<h3>
